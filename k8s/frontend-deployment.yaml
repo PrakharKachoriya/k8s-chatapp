@@ -16,5 +16,12 @@ spec:
       containers:
       - name: frontend
         image: prakharkachoriya/k8s-chatapp-frontend:latest  
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
         ports:
         - containerPort: 80
