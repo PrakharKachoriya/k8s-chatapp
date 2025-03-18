@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: frontend-deployment
   namespace: chat-app
 spec:
   replicas: 1
@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: iemafzal/f-s_frontend:v1  
+        image: prakharkachoriya/k8s-chatapp-frontend:latest  
         ports:
         - containerPort: 80
